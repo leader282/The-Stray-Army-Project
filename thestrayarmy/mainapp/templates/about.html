@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <title>Dogger &mdash; Website Template by Colorlib</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/brands.min.css"
+      integrity="sha512-+oRH6u1nDGSm3hH8poU85YFIVTdSnS2f+texdPGrURaJh8hzmhMiZrQth6l56P4ZQmxeZzd2DqVEMqQoJ8J89A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    {% comment %}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css"
+      integrity="sha512-RvQxwf+3zJuNwl4e0sZjQeX7kUa3o82bDETpgVCH2RiwYSZVDdFJ7N/woNigN/ldyOOoKw8584jM4plQdt8bhA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    {% endcomment %}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    {% comment %}
+    <link
+      rel="stylesheet"
+      href="https://preview.colorlib.com/theme/dogger/fonts,_icomoon,_style.css+css,_bootstrap.min.css+css,_jquery-ui.css+css,_owl.carousel.min.css+css,_owl.theme.default.min.css+css,_owl.theme.default.min.css+css,_jquery.fancybox.min.css+css,_bootstrap-datepicker.css+fonts,_flaticon,_font,_flaticon.css+css,_aos.css+css,_style.css.pagespeed.cc.4S9WmG2oZq.css"
+    />
+    {% endcomment %} {% comment %}
+    <link
+      rel="stylesheet"
+      href="https://preview.colorlib.com/theme/dogger/fonts,_icomoon,_style.css+css,_bootstrap.min.css+css,_jquery-ui.css+css,_owl.carousel.min.css+css,_owl.theme.default.min.css+css,_owl.theme.default.min.css+css,_jquery.fancybox.min.css+css,_bootstrap-datepicker.css+fonts,_flaticon,_font,_flaticon.css+css,_aos.css+css,_style.css.pagespeed.cc.4S9WmG2oZq.css"
+    />
+    {% endcomment %}
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
+  </head>
+  <body
+    data-spy="scroll"
+    data-target=".site-navbar-target"
+    data-offset="300"
+    id="home-section"
+  >
+    {% comment %}
+    <div id="overlayer"></div>
+    {% endcomment %} {% comment %}
+    <div class="loader">
+      {% endcomment %} {% comment %}
+      <div class="spinner-border text-primary" role="status">
+        {% endcomment %} {% comment %}
+        <span class="sr-only">Loading...</span> {% endcomment %} {% comment %}
+      </div>
+      {% endcomment %} {% comment %}
+    </div>
+    {% endcomment %}
+    <div class="site-wrap">
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+      <header
+        class="site-navbar js-sticky-header site-navbar-target"
+        role="banner"
+      >
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-6 col-xl-2">
+              <h1 class="mb-0 site-logo">
+                <a href="index.html" class="h2 mb-0"
+                  >Dogger<span class="text-primary">.</span>
+                </a>
+              </h1>
+            </div>
+            <div class="col-12 col-md-10 d-none d-xl-block">
+              <nav
+                class="site-navigation position-relative text-right"
+                role="navigation"
+              >
+                <ul
+                  class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block"
+                >
+                  <li>
+                    <a href="/" class="nav-link">Home</a>
+                  </li>
+                  <li >
+                    <a href="about" class="nav-link"
+                      >About</a>
+                    
+                  </li>
+                  <li>
+                    <a href="work" class="nav-link"
+                      >What We Do</a
+                    >
+                  </li>
+                  <li>
+                    <a href="stories" class="nav-link"
+                      >Success Stories</a
+                    >
+                  </li>
+                  <li>
+                    <a href="story" class="nav-link"
+                      >Up for Adoption</a
+                    >
+                  </li>
+                  <li>
+                    <a href="contact" class="nav-link"
+                      >Contact</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div
+              class="col-6 d-inline-block d-xl-none ml-md-0 py-3"
+              style="position: relative; top: 3px"
+            >
+              <a
+                href="index.html#"
+                class="site-menu-toggle js-menu-toggle float-right"
+                ><span class="icon-menu h3"></span
+              ></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+
+      <section class="overflow-hidden bg-light" style:"min-height:500px">
+        <div class="about-bg">
+          <h1 style="text-align: center; padding: 20%; color: #faf5ea">
+            About us
+          </h1>
+        </div>
+      </section>
+
+      <section class="site-section">
+        <div class="container">
+          <div class="row justify-content-center" >
+            <div class="col-lg-6 text-center heading-section mb-5">
+              {% comment %} <div class="paws">
+                <span class="icon-paw"></span>
+              </div> {% endcomment %}
+              <h2 class="text-black mb-2">Working together to create a change…</h2>
+              <p data-aos="fade-up">
+               During the lockdown, when we were stuck in our homes, the street animals were not getting any food to eat. We started feeding the dogs in our locality every day.
+Eventually, we realised the various problems the animals in the street were facing. So, we dedicatedly started helping all those in need and eventually grew together as a team to form The Stray Army Charitable Trust. We believe that every animal deserves a second chance so that they can live their lives with love, care and affection.
+
+              </p>
+            </div>
+          </div>
+          <div class="row hover-1-wrap mb-5 mt-5">
+            <div class="col-12">
+              <div class="row">
+                <div class="mb-4 col-lg-6 order-lg-2" data-aos="fade-right">
+                  <a href="index.html#" class="hover-1">
+                    <img
+                      src="{% static 'home/img/about1.jpg' %}"
+                      alt="Image"
+                      class="img-fluid"
+                      data-pagespeed-url-hash="1693781069"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="col-lg-5 mr-auto align-self-center order-lg-1"
+                  data-aos="fade-left"
+                >
+                  <h2 class="text-black">Treat on Street</h2>
+                  <p class="mb-4">
+                   Every day we rescue animals in our city and we use their stories and our work to inspire and engage both the local community and people around the world.
+
+                  </p>
+                  {% comment %} <p>
+                    <a href="index.html#" class="btn btn-primary">Read More</a>
+                  </p> {% endcomment %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row hover-1-wrap mb-5">
+            <div class="col-12">
+              <div class="row">
+                <div class="mb-4 col-lg-6" data-aos="fade-left">
+                  <a href="index.html#" class="hover-1">
+                    <img
+                      src="{% static 'home/img/about2.jpg' %}"
+                      alt="Image"
+                      class="img-fluid"
+                      data-pagespeed-url-hash="1104781227"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="col-lg-5 ml-auto align-self-center"
+                  data-aos="fade-right"
+                >
+                  <h2 class="text-black">Daily Feeding Drives
+</h2>
+                  <p class="mb-4">
+                
+The lockdown of Covid-19 affected the strays adversely. Most of the stray dogs and cattle, who relied on human beings for their source of food, were left starving. Closure of shops and roadside eateries also added to their misery. Seeing such a scenario, animal lovers of Jamshedpur came to their rescue and made sure no stray goes to sleep in an empty stomach or worse, dies of starvation.
+
+                  </p>
+            
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row hover-1-wrap mb-5">
+            <div class="col-12">
+              <div class="row">
+                <div class="mb-4 col-lg-6 order-lg-2" data-aos="fade-right">
+                  <a href="index.html#" class="hover-1">
+                    <img
+                      src="{% static 'home/img/about3.jpg' %}"
+                      alt="Image"
+                      class="img-fluid"
+                      data-pagespeed-url-hash="1399281148"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="col-lg-5 mr-auto align-self-center order-lg-1"
+                  data-aos="fade-left"
+                >
+                  <h2 class="text-black"> Winter Drives
+</h2>
+                  <p class="mb-4">
+             
+In the freezing cold of winters when we warmed ourselves in the cozy blankets, our stray animals were freezing to death. We distributed 50 jute bags filled with hay on which they curled and slept.
+
+                  </p>
+               
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row hover-1-wrap mb-5">
+            <div class="col-12">
+              <div class="row">
+                <div class="mb-4 col-lg-6" data-aos="fade-left">
+                  <a href="index.html#" class="hover-1">
+                    <img
+                      src="{% static 'home/img/about4.jpg' %}"
+                      alt="Image"
+                      class="img-fluid"
+                      data-pagespeed-url-hash="1104781227"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="col-lg-5 ml-auto align-self-center"
+                  data-aos="fade-right"
+                >
+                  <h2 class="text-black"> Reflective Collar Drives</h2>
+                  <p class="mb-4">
+                   
+
+Every day we come across so many injured dogs. The rate of accidents is high during hours of poor visibility for instance at night or during rain. Keeping this in mind, we organized a collar drive where we successfully put on 100 radium collars for stray dogs which prevented them from accidents.
+
+                  </p>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+             <div class="row hover-1-wrap mb-5">
+            <div class="col-12">
+              <div class="row">
+                <div class="mb-4 col-lg-6 order-lg-2" data-aos="fade-right">
+                  <a href="index.html#" class="hover-1">
+                    <img
+                      src="{% static 'home/img/about5.jpg' %}"
+                      alt="Image"
+                      class="img-fluid"
+                      data-pagespeed-url-hash="1399281148"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="col-lg-5 mr-auto align-self-center order-lg-1"
+                  data-aos="fade-left"
+                >
+                  <h2 class="text-black"> Anti-Rabies Drive
+
+</h2>
+                  <p class="mb-4">
+       
+On 17th April 2022, The Stray Army Team, in collaboration with The Rotary Club of Jamshedpur Steel City, conducted an Anti-Rabies Camp to vaccinate all the dogs in and around the Tatanagar Railway Station. In total, we vaccinated 50 dogs.
+
+                  </p>
+               
+                </div>
+              </div>
+            </div>
+          </div>
+
+             <div class="row hover-1-wrap mb-5">
+            <div class="col-12">
+              <div class="row">
+                <div class="mb-4 col-lg-6 " data-aos="fade-left">
+                  <a href="index.html#" class="hover-1">
+                    <img
+                      src="{% static 'home/img/about6.jpg' %}"
+                      alt="Image"
+                      class="img-fluid"
+                      data-pagespeed-url-hash="1399281148"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="col-lg-5 ml-auto align-self-center"
+                  data-aos="fade-right"
+                >
+                  <h2 class="text-black"> Adoption Carnival
+</h2>
+                  <p class="mb-4">
+    
+
+If we are desi, then why do our pets need to be videsi… With this view, we organized this camp with the vision to get the street animals of our city adopted. We conduct regular house visits of the adopters to ensure that all the adopted pets are safe, vaccinated and has been kept in the best of their health
+
+                  </p>
+               
+                </div>
+              </div>
+            </div>
+          </div>
+             <div class="row hover-1-wrap mb-5">
+            <div class="col-12">
+              <div class="row">
+                <div class="mb-4 col-lg-6 order-lg-2" data-aos="fade-right">
+                  <a href="index.html#" class="hover-1">
+                    <img
+                      src="{% static 'home/img/about7.jpg' %}"
+                      alt="Image"
+                      class="img-fluid"
+                      data-pagespeed-url-hash="1399281148"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="col-lg-5 mr-auto align-self-center order-lg-1"
+                  data-aos="fade-left"
+                >
+                  <h2 class="text-black">     Water Bowl Drives
+</h2>
+                  <p class="mb-4">
+        
+
+The Stray Army Charitable Trust and The Rotary Club of Jamshedpur Steel City came together to place 25 cemented water bowls for the thirsty dogs, cows and birds and around Jamshedpur.
+
+                  </p>
+               
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9">
+              <div class="row">
+                <div class="col-md-5">
+                  <h2 class="footer-heading mb-4">About Us</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Neque facere laudantium magnam voluptatum autem. Amet
+                    aliquid nesciunt veritatis aliquam.
+                  </p>
+                </div>
+                <div class="col-md-3 ml-auto">
+                  <h2 class="footer-heading mb-4">Quick Links</h2>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="index.html#about-section" class="smoothscroll"
+                        >About Us</a
+                      >
+                    </li>
+
+                    <li>
+                      <a href="index.html#contact-section" class="smoothscroll"
+                        >Contact Us</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-4">
+                  <h2 class="footer-heading mb-4">Follow Us</h2>
+                  <a href="index.html#" class="pl-0 pr-3"
+                    ><span
+                      class="fa fa-facebook-f"
+                      style="font-size: 1.2rem"
+                    ></span
+                  ></a>
+                  <a href="index.html#" class="pl-3 pr-3"
+                    ><span
+                      class="fa fa-envelope"
+                      style="font-size: 1.2rem"
+                    ></span
+                  ></a>
+
+                  <a href="index.html#" class="pl-3 pr-3"
+                    ><span
+                      class="fa fa-instagram"
+                      style="font-size: 1.2rem"
+                    ></span
+                  ></a>
+                  <a href="index.html#" class="pl-3 pr-3"
+                    ><span
+                      class="fa fa-twitter"
+                      style="font-size: 1.2rem"
+                    ></span
+                  ></a>
+
+                  <a href="index.html#" class="pl-3 pr-3"
+                    ><span
+                      class="fa fa-youtube-play"
+                      style="font-size: 1.2rem"
+                    ></span
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
+              <form action="index.html#" method="post" class="footer-subscribe">
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    class="form-control border-secondary text-white bg-transparent"
+                    placeholder="Enter Email"
+                    aria-label="Enter Email"
+                    aria-describedby="button-addon2"
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-primary text-black"
+                      type="button"
+                      id="button-addon2"
+                    >
+                      Send
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="{% static 'home/js/jquery-3.3.1.min.js' %}"></script>
+
+    <script src="{% static 'home/js/ease.js' %}"></script>
+    <script src="{% static 'home/js/script_all.js' %}"></script>
+    <script src="{% static 'home/js/util.js' %}"></script>
+  </body>
+</html>
