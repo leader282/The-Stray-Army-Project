@@ -2,7 +2,7 @@
 {% load static %}
 <html lang="en">
   <head>
-    <title>Dogger &mdash; Website Template by Colorlib</title>
+    <title>The Stray Army | About</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -26,7 +26,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    {% comment %}
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css"
@@ -34,23 +33,20 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    {% endcomment %}
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    {% comment %}
     <link
       rel="stylesheet"
       href="https://preview.colorlib.com/theme/dogger/fonts,_icomoon,_style.css+css,_bootstrap.min.css+css,_jquery-ui.css+css,_owl.carousel.min.css+css,_owl.theme.default.min.css+css,_owl.theme.default.min.css+css,_jquery.fancybox.min.css+css,_bootstrap-datepicker.css+fonts,_flaticon,_font,_flaticon.css+css,_aos.css+css,_style.css.pagespeed.cc.4S9WmG2oZq.css"
     />
-    {% endcomment %} {% comment %}
     <link
       rel="stylesheet"
       href="https://preview.colorlib.com/theme/dogger/fonts,_icomoon,_style.css+css,_bootstrap.min.css+css,_jquery-ui.css+css,_owl.carousel.min.css+css,_owl.theme.default.min.css+css,_owl.theme.default.min.css+css,_jquery.fancybox.min.css+css,_bootstrap-datepicker.css+fonts,_flaticon,_font,_flaticon.css+css,_aos.css+css,_style.css.pagespeed.cc.4S9WmG2oZq.css"
     />
-    {% endcomment %}
     <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static 'home/images/favicon.ico' %}">
   </head>
   <body
     data-spy="scroll"
@@ -64,8 +60,7 @@
     <div class="loader">
       {% endcomment %} {% comment %}
       <div class="spinner-border text-primary" role="status">
-        {% endcomment %} {% comment %}
-        <span class="sr-only">Loading...</span> {% endcomment %} {% comment %}
+        <span class="sr-only">Loading...</span>
       </div>
       {% endcomment %} {% comment %}
     </div>
@@ -79,96 +74,94 @@
         </div>
         <div class="site-mobile-menu-body"></div>
       </div>
-        <header
-        class="site-navbar js-sticky-header site-navbar-target"
-        role="banner"
-      >
-        <div class="">
-          <div class="row align-items-center">
-            <div class=" col-xl-1">
-              <h1 class="mb-0 site-logo">
-                <a href="index.html" class="h2 mb-0"
-                  ><img src="{% static 'home/img/logo.png' %}" style="
-    width: 110px;
-    padding: 5px 0;
-"></img>
-  
-                </a>
-              </h1>
-            </div>
-            <div class=" col-xl-1">
-              <h1 class="mb-0 site-logo">
-                <a href="index.html" class="h2 mb-0"
-                  >
-                  <img src="{% static 'home/img/text.png' %}" style="
-    height: 90px;
-    padding: 5px 0;
-"></img>
-                </a>
-              </h1>
-            </div>
-            {% comment %} <div class="col-12 d-none d-xl-block"> {% endcomment %}
-            <div class="d-none d-xl-block">
-              <nav
-                class="site-navigation position-relative text-right"
-                role="navigation"
-              >
-                <ul
-                  class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block"
+      <header
+      class="site-navbar js-sticky-header site-navbar-target"
+      role="banner"
+    >
+      <div class="">
+        <div class="row align-items-center">
+          <div class=" col-xl-1">
+            <h1 class="mb-0 site-logo">
+              <a href="/" class="h2 mb-0"
+                ><img src="{% static 'home/img/logo.png' %}" height="100px" style="margin-left: 20px; margin-top: 20px;"></img>
+
+              </a>
+            </h1>
+          </div>
+          <div class=" col-xl-1">
+            <h1 class="mb-0 site-logo">
+              <a href="/" class="h2 mb-0"
                 >
-                  <li>
-                    <a href="/" class="nav-link">Home</a>
-                  </li>
-                  <li >
-                    <a href="about" class="nav-link"
-                      >About</a>
-                    
-                  </li>
-                  <li>
-                    <a href="work" class="nav-link"
-                      >What We Do</a
-                    >
-                  </li>
-                  <li>
-                    <a href="stories" class="nav-link"
-                      >Success Stories</a
-                    >
-                  </li>
-                  <li>
-                    <a href="adopt" class="nav-link"
-                      >Up for Adoption</a
-                    >
-                  </li>
-                  <li>
-                    <a href="contact" class="nav-link"
-                      >Contact Us</a
-                    >
-                  </li>
-                  <li>
-                    <span>
-                     <a
-                      class="btn btn-primary"
-                      href="donate"
-                    
-                    >Donate</a>
-                    </span>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <div
-              class="col-6 d-inline-block d-xl-none ml-md-0 py-3"
-              style="position: relative; top: 3px"
+                <img src="{% static 'home/img/text.png' %}" style="
+  height: 90px;
+  padding: 5px 0;
+  margin-top: 20px;
+"></img>
+              </a>
+            </h1>
+          </div>
+          {% comment %} <div class="col-12 d-none d-xl-block"> {% endcomment %}
+          <div class="d-none d-xl-block">
+            <nav
+              class="site-navigation position-relative text-right"
+              role="navigation"
             >
-              <a
-                href="index.html#"
-                class="site-menu-toggle js-menu-toggle float-right"
-                ><span class="icon-menu h3"></span
-              ></a>
-            </div>
+              <ul
+                class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block"
+              >
+                <li>
+                  <a href="/" class="nav-link">Home</a>
+                </li>
+                <li >
+                  <a href="about" class="nav-link"
+                    >About</a>
+                  
+                </li>
+                <li>
+                  <a href="work" class="nav-link"
+                    >What We Do</a
+                  >
+                </li>
+                <li>
+                  <a href="stories" class="nav-link"
+                    >Success Stories</a
+                  >
+                </li>
+                <li>
+                  <a href="adopt" class="nav-link"
+                    >Up for Adoption</a
+                  >
+                </li>
+                <li>
+                  <a href="contact" class="nav-link"
+                    >Contact Us</a
+                  >
+                </li>
+                <li>
+                  <span>
+                   <a
+                    class="btn btn-primary"
+                    href="donate"
+                  
+                  >Donate</a>
+                  </span>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div
+            class="col-6 d-inline-block d-xl-none ml-md-0 py-3"
+            style="position: relative; top: 3px"
+          >
+            <a
+              href="index.html#"
+              class="site-menu-toggle js-menu-toggle float-right"
+              ><span class="icon-menu h3"></span
+            ></a>
           </div>
         </div>
-      </header>
+      </div>
+    </header>
 
 
       <section class="overflow-hidden bg-light" style:"min-height:500px">
@@ -458,33 +451,33 @@ Working for a cause!
                 </div>
                 <div class="col-md-4">
                   <h2 class="footer-heading mb-4">Follow Us</h2>
-                  <a href="index.html#" class="pl-0 pr-3"
+                  <a href="https://www.facebook.com/thestrayarmy" class="pl-0 pr-3"
                     ><span
                       class="fa fa-facebook-f"
                       style="font-size: 1.2rem"
                     ></span
                   ></a>
-                  <a href="index.html#" class="pl-3 pr-3"
+                  <a href="mailto:thestrayarmy@gmail.com" class="pl-3 pr-3"
                     ><span
                       class="fa fa-envelope"
                       style="font-size: 1.2rem"
                     ></span
                   ></a>
 
-                  <a href="index.html#" class="pl-3 pr-3"
+                  <a href="https://www.instagram.com/thestrayarmy/" class="pl-3 pr-3"
                     ><span
                       class="fa fa-instagram"
                       style="font-size: 1.2rem"
                     ></span
                   ></a>
-                  <a href="index.html#" class="pl-3 pr-3"
+                  <a href="https://twitter.com/thestrayarmy" class="pl-3 pr-3"
                     ><span
                       class="fa fa-twitter"
                       style="font-size: 1.2rem"
                     ></span
                   ></a>
 
-                  <a href="index.html#" class="pl-3 pr-3"
+                  <a href="https://www.youtube.com/channel/UCCCfd5YG4kOvQFsWPeI3xhA/" class="pl-3 pr-3"
                     ><span
                       class="fa fa-youtube-play"
                       style="font-size: 1.2rem"
