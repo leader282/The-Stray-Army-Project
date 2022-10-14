@@ -20,3 +20,10 @@ class Story(models.Model):
     heading = models.CharField(max_length=20000, default=None)
     description = models.CharField(max_length=20000)
     image = models.ImageField()
+
+class Adopters(models.Model):
+    image = models.ImageField()
+
+class Adoption(models.Model):
+    description = models.CharField(max_length=20000)
+    image = models.ImageField()

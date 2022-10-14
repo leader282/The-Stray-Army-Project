@@ -200,76 +200,31 @@ Fill the form below to adopt a dog and we will connect with you soon.</p>
           
 <section class="gallery">
     <div class="container">
-        
-    <div class="row mb-5 ml-auto mr-auto">
-            <div class="col-12">
-              <div class="row workrow">
-                <div class="work-card mb-4 col-lg-4" data-aos="fade-right">
-                  <a >
-                    <img
-                      src="{% static 'home/img/ray.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                </a>
-                <h3 class="text-black pt-8 " style="text-align:center">#Ray</h3>
-            
-                </div>
-                
-                <div class="work-card mb-4 col-lg-4" data-aos="fade-up">
-                  <a class="hover-1">
-                    <img
-                      src="{% static 'home/img/beta.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                  </a>
-                <h3 class="text-black pt-8 " style="text-align:center">#Beta</h3>
-                </div>
-                <div class="work-card mb-4 col-lg-4" data-aos="fade-down">
-                  <a  class="hover-1">
-                    <img
-                      src="{% static 'home/img/gamma.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                  </a>
-         <h3 class="text-black pt-8 " style="text-align:center">#Gamma</h3>
-                </div>
-                
-                
-              </div>
-            </div>
-          </div>
+      {% for adoption in adoptions %}
+      {% if forloop.counter0|divisibleby:3 %}
+      <div class="row mb-5 ml-auto mr-auto">
+        <div class="col-12">
+          <div class="row workrow">
+      {% endif %}
+            <div class="work-card mb-4 col-lg-4" {% if forloop.counter0|divisibleby:3 %} data-aos="fade-right" {% endif %} {% if forloop.counter|divisibleby:3 %} data-aos="fade-down" {% else %} data-aos="fade-up" {% endif %}>
+              <a >
+                <img
+                  src="{{ adoption.image.url }}"
+                  alt="Image"
+                  class="img-fluid"
+                  data-pagespeed-url-hash="1104781227"
+                />
+              </a>
+              <h3 class="text-black pt-8 " style="text-align:center">#{{ adoption.description }}</h3>
           
-            
-            <div class="row mb-5 ml-auto mr-auto">
-              <div class="col-12">
-                <div class="row workrow">
-            <div class="work-card mb-4 col-lg-4 ml-auto mr-auto" data-aos="fade-up">
-                  <a class="hover-1">
-                    <img
-                      src="{% static 'home/img/alpha.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                  </a>
-               <h3 class="text-black pt-8 " style="text-align:center">#Alpha</h3>
-                </div>
-                
-                
-              </div>
             </div>
+          {% if forloop.counter|divisibleby:3 %}
           </div>
-            
-           
-          
         </div>
-        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
 
 </section>
 

@@ -33,14 +33,16 @@ def work(request):
 def story(request):
 
     aboutstory = Story.objects.all()
+    adopters = Adopters.objects.all()
     # return response with template and context
-    return render(request, "story.html", {'items': aboutstory})
+    return render(request, "story.html", {'items': aboutstory, 'adopters': adopters})
 
 
 def adopt(request):
 
+    adoptions = Adoption.objects.all()
     # return response with template and context
-    return render(request, "adoption.html")
+    return render(request, "adoption.html", {'adoptions': adoptions})
 
 
 def contact(request):

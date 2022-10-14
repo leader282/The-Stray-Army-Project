@@ -208,38 +208,28 @@ We believe all animals deserve compassion and protection. We are working for the
           </div>
 
           {% for item in items %}
+          {% if forloop.counter0|divisibleby:3 %}
           <div class="row mb-5">
             <div class="col-12">
               <div class="row workrow">
-                <div class="work-card mb-4 col-lg-4" data-aos="{% cycle 'fade-right' 'fade-up' 'fade-left' %}">
+          {% endif %}
+                <div class="work-card mb-4 col-lg-4" {% if forloop.counter0|divisibleby:3 %} data-aos="fade-right" {% endif %} {% if forloop.counter|divisibleby:3 %} data-aos="fade-left" {% else %} data-aos="fade-up" {% endif %} >
                   <a >
                     <img
-                      src="{% static 'home/img/rescue.jpg' %}"
+                      src="{{ item.image.url }}"
                       alt="Image"
                       class="img-fluid"
                       data-pagespeed-url-hash="1104781227"
                     />
                     
-                </a>
-                <h3 class="text-black pt-8 " style="text-align:center">Rescue</h3>
+                  </a>
+                  <h3 class="text-black pt-8 " style="text-align:center">{{ item.description }}</h3>
                 </div>
-
-                <div class="work-card mb-4 col-lg-4" data-aos="{% cycle 'fade-right' 'fade-up' 'fade-left' %}">
-                  <a >
-                    <img
-                      src="{% static 'home/img/rescue.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                    
-                </a>
-                <h3 class="text-black pt-8 " style="text-align:center">Rescue</h3>
-                </div>
-                
+              {% if forloop.counter|divisibleby:3 %}
               </div>
             </div>
           </div>
+          {% endif %}
           {% endfor %}
 
           

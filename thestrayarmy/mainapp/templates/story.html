@@ -232,171 +232,32 @@ We encourage the community to protect all animals' lives by sharing the incredib
       </section>
 <section class="gallery">
     <div class="container">
-        <h1 class="text-black" style="padding-bottom: 30px;font-weight:800;text-align:center">Happy Adopters</h1>
-    <div class="row mb-5 ml-auto mr-auto">
-            <div class="col-12">
-              <div class="row workrow">
-                <div class="work-card mb-4 col-lg-3" data-aos="fade-right">
-                  <a >
-                    <img
-                      src="{% static 'home/img/story1.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                    
-                </a>
-            
-                </div>
+      <h1 class="text-black" style="padding-bottom: 30px;font-weight:800;text-align:center">Happy Adopters</h1>
+      {% for adopter in adopters %}
+      {% if forloop.counter0|divisibleby:4 %}
+      <div class="row mb-5 ml-auto mr-auto">
+        <div class="col-12">
+          <div class="row workrow">
+      {% endif %}
+            <div class="work-card mb-4 col-lg-3" {% if forloop.counter0|divisibleby:4 %} data-aos="fade-right" {% endif %} {% if forloop.counter|divisibleby:4 %} data-aos="fade-left" {% endif %} {% if forloop.counter|divisibleby:2 %} data-aos="fade-up" {% else %} data-aos="fade-down" {% endif %}>
+              <a >
+                <img
+                  src="{{ adopter.image.url }}"
+                  alt="Image"
+                  class="img-fluid"
+                  data-pagespeed-url-hash="1104781227"
+                />
                 
-                <div class="work-card mb-4 col-lg-3" data-aos="fade-up">
-                  <a class="hover-1">
-                    <img
-                      src="{% static 'home/img/story2.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                  </a>
-                
-                </div>
-                <div class="work-card mb-4 col-lg-3" data-aos="fade-down">
-                  <a  class="hover-1">
-                    <img
-                      src="{% static 'home/img/story3.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                  </a>
-         
-                </div>
-                
-                <div class="work-card mb-4 col-lg-3" data-aos="fade-right">
-                    <a >
-                        <img
-                        src="{% static 'home/img/story4.jpg' %}"
-                        alt="Image"
-                        class="img-fluid"
-                        data-pagespeed-url-hash="1104781227"
-                        />
-                        
-                    </a>
-                    
-                </div>
-                
-              </div>
+              </a>
+        
             </div>
+          {% if forloop.counter|divisibleby:4 %}
           </div>
-          
-            
-            <div class="row mb-5 ml-auto mr-auto">
-              <div class="col-12">
-                <div class="row workrow">
-            <div class="work-card mb-4 col-lg-3" data-aos="fade-right">
-                  <a class="hover-1">
-                    <img
-                      src="{% static 'home/img/story5.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                  </a>
-               
-                </div>
-                <div class="work-card mb-4 col-lg-3" data-aos="fade-up">
-                  <a  class="hover-1">
-                    <img
-                      src="{% static 'home/img/story6.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                  </a>
-            
-                </div>
-                <div class="work-card mb-4 col-lg-3" data-aos="fade-down">
-                  <a  class="hover-1">
-                    <img
-                      src="{% static 'home/img/story7.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                  </a>
-            
-                </div>
-                <div class="work-card mb-4 col-lg-3" data-aos="fade-left">
-                  <a  class="hover-1">
-                    <img
-                      src="{% static 'home/img/story8.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                  </a>
-            
-                </div>
-                
-              </div>
-            </div>
-          </div>
-            
-            <div class="row mb-5 ml-auto mr-auto">
-              <div class="col-12">
-                <div class="row workrow">
-            <div class="work-card mb-4 col-lg-3" data-aos="fade-right">
-                  <a class="hover-1">
-                    <img
-                      src="{% static 'home/img/story9.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                  </a>
-               
-                </div>
-                <div class="work-card mb-4 col-lg-3" data-aos="fade-up">
-                  <a  class="hover-1">
-                    <img
-                      src="{% static 'home/img/story10.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                  </a>
-            
-                </div>
-                <div class="work-card mb-4 col-lg-3" data-aos="fade-down">
-                  <a  class="hover-1">
-                    <img
-                      src="{% static 'home/img/story11.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                  </a>
-            
-                </div>
-                <div class="work-card mb-4 col-lg-3" data-aos="fade-left">
-                  <a  class="hover-1">
-                    <img
-                      src="{% static 'home/img/story12.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                  </a>
-            
-                </div>
-                
-              </div>
-            </div>
-          </div>
-
-          
         </div>
-        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
 
 </section>
 
