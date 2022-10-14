@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import *
 
 # Create your views here.
 
@@ -11,26 +12,29 @@ def index(request):
 
 def home(request):
 
-    # return response with template and context
-    return render(request, "index.html")
+    homeitems = Home.objects.all()
+    return render(request, "index.html", {'items': homeitems})
 
 
 def about(request):
 
+    aboutitems = About.objects.all()
     # return response with template and context
-    return render(request, "about.html")
+    return render(request, "about.html", {'items': aboutitems})
 
 
 def work(request):
 
+    aboutwork = Whatwedo.objects.all()
     # return response with template and context
-    return render(request, "work.html")
+    return render(request, "work.html", {'items': aboutwork})
 
 
 def story(request):
 
+    aboutstory = Story.objects.all()
     # return response with template and context
-    return render(request, "story.html")
+    return render(request, "story.html", {'items': aboutstory})
 
 
 def adopt(request):

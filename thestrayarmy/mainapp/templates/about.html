@@ -187,13 +187,14 @@ Eventually, we realised the various problems the animals in the street were faci
               </p>
             </div>
           </div>
-          <div class="row hover-1-wrap mb-5 mt-5">
+          {% for item in items %}
+          <div class="row hover-1-wrap mb-5">
             <div class="col-12">
               <div class="row">
-                <div class="mb-4 col-lg-6 order-lg-2" data-aos="fade-right">
+                <div {% if forloop.counter|divisibleby:2 %} class="mb-4 col-lg-6 order-lg-2" data-aos="fade-right" {% else %} class="mb-4 col-lg-6" data-aos="fade-left" {% endif %}>
                   <a href="index.html#" class="hover-1">
                     <img
-                      src="{% static 'home/img/about1.jpg' %}"
+                      src="{{ item.image.url }}"
                       alt="Image"
                       class="img-fluid"
                       data-pagespeed-url-hash="1693781069"
@@ -201,13 +202,17 @@ Eventually, we realised the various problems the animals in the street were faci
                   </a>
                 </div>
                 <div
+                {% if forloop.counter|divisibleby:2 %}
                   class="col-lg-5 mr-auto align-self-center order-lg-1"
                   data-aos="fade-left"
+                {% else %}
+                  class="col-lg-5 mr-auto align-self-center"
+                  data-aos="fade-right"
+                {% endif %}
                 >
-                  <h2 class="text-black">Treat on Street</h2>
+                  <h2 class="text-black">{{ item.heading }}</h2>
                   <p class="mb-4">
-                   Every day we rescue animals in our city and we use their stories and our work to inspire and engage both the local community and people around the world.
-
+                    {{ item.description }}
                   </p>
                   {% comment %} <p>
                     <a href="index.html#" class="btn btn-primary">Read More</a>
@@ -216,185 +221,7 @@ Eventually, we realised the various problems the animals in the street were faci
               </div>
             </div>
           </div>
-          <div class="row hover-1-wrap mb-5">
-            <div class="col-12">
-              <div class="row">
-                <div class="mb-4 col-lg-6" data-aos="fade-left">
-                  <a href="index.html#" class="hover-1">
-                    <img
-                      src="{% static 'home/img/about2.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                  </a>
-                </div>
-                <div
-                  class="col-lg-5 ml-auto align-self-center"
-                  data-aos="fade-right"
-                >
-                  <h2 class="text-black">Daily Feeding Drives
-</h2>
-                  <p class="mb-4">
-                
-The lockdown of Covid-19 affected the strays adversely. Most of the stray dogs and cattle, who relied on human beings for their source of food, were left starving. Closure of shops and roadside eateries also added to their misery. Seeing such a scenario, animal lovers of Jamshedpur came to their rescue and made sure no stray goes to sleep in an empty stomach or worse, dies of starvation.
-
-                  </p>
-            
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row hover-1-wrap mb-5">
-            <div class="col-12">
-              <div class="row">
-                <div class="mb-4 col-lg-6 order-lg-2" data-aos="fade-right">
-                  <a href="index.html#" class="hover-1">
-                    <img
-                      src="{% static 'home/img/about3.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1399281148"
-                    />
-                  </a>
-                </div>
-                <div
-                  class="col-lg-5 mr-auto align-self-center order-lg-1"
-                  data-aos="fade-left"
-                >
-                  <h2 class="text-black"> Winter Drives
-</h2>
-                  <p class="mb-4">
-             
-In the freezing cold of winters when we warmed ourselves in the cozy blankets, our stray animals were freezing to death. We distributed 50 jute bags filled with hay on which they curled and slept.
-
-                  </p>
-               
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row hover-1-wrap mb-5">
-            <div class="col-12">
-              <div class="row">
-                <div class="mb-4 col-lg-6" data-aos="fade-left">
-                  <a href="index.html#" class="hover-1">
-                    <img
-                      src="{% static 'home/img/about4.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                  </a>
-                </div>
-                <div
-                  class="col-lg-5 ml-auto align-self-center"
-                  data-aos="fade-right"
-                >
-                  <h2 class="text-black"> Reflective Collar Drives</h2>
-                  <p class="mb-4">
-                   
-
-Every day we come across so many injured dogs. The rate of accidents is high during hours of poor visibility for instance at night or during rain. Keeping this in mind, we organized a collar drive where we successfully put on 100 radium collars for stray dogs which prevented them from accidents.
-
-                  </p>
-                
-                </div>
-              </div>
-            </div>
-          </div>
-             <div class="row hover-1-wrap mb-5">
-            <div class="col-12">
-              <div class="row">
-                <div class="mb-4 col-lg-6 order-lg-2" data-aos="fade-right">
-                  <a href="index.html#" class="hover-1">
-                    <img
-                      src="{% static 'home/img/about5.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1399281148"
-                    />
-                  </a>
-                </div>
-                <div
-                  class="col-lg-5 mr-auto align-self-center order-lg-1"
-                  data-aos="fade-left"
-                >
-                  <h2 class="text-black"> Anti-Rabies Drive
-
-</h2>
-                  <p class="mb-4">
-       
-On 17th April 2022, The Stray Army Team, in collaboration with The Rotary Club of Jamshedpur Steel City, conducted an Anti-Rabies Camp to vaccinate all the dogs in and around the Tatanagar Railway Station. In total, we vaccinated 50 dogs.
-
-                  </p>
-               
-                </div>
-              </div>
-            </div>
-          </div>
-
-             <div class="row hover-1-wrap mb-5">
-            <div class="col-12">
-              <div class="row">
-                <div class="mb-4 col-lg-6 " data-aos="fade-left">
-                  <a href="index.html#" class="hover-1">
-                    <img
-                      src="{% static 'home/img/about6.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1399281148"
-                    />
-                  </a>
-                </div>
-                <div
-                  class="col-lg-5 ml-auto align-self-center"
-                  data-aos="fade-right"
-                >
-                  <h2 class="text-black"> Adoption Carnival
-</h2>
-                  <p class="mb-4">
-    
-
-If we are desi, then why do our pets need to be videsi… With this view, we organized this camp with the vision to get the street animals of our city adopted. We conduct regular house visits of the adopters to ensure that all the adopted pets are safe, vaccinated and has been kept in the best of their health
-
-                  </p>
-               
-                </div>
-              </div>
-            </div>
-          </div>
-             <div class="row hover-1-wrap mb-5">
-            <div class="col-12">
-              <div class="row">
-                <div class="mb-4 col-lg-6 order-lg-2" data-aos="fade-right">
-                  <a href="index.html#" class="hover-1">
-                    <img
-                      src="{% static 'home/img/about7.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1399281148"
-                    />
-                  </a>
-                </div>
-                <div
-                  class="col-lg-5 mr-auto align-self-center order-lg-1"
-                  data-aos="fade-left"
-                >
-                  <h2 class="text-black">     Water Bowl Drives
-</h2>
-                  <p class="mb-4">
-        
-
-The Stray Army Charitable Trust and The Rotary Club of Jamshedpur Steel City came together to place 25 cemented water bowls for the thirsty dogs, cows and birds and around Jamshedpur.
-
-                  </p>
-               
-                </div>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
 
         </div>
       </section>

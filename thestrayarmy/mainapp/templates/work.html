@@ -207,11 +207,24 @@ We believe all animals deserve compassion and protection. We are working for the
             </div>
           </div>
 
-
+          {% for item in items %}
           <div class="row mb-5">
             <div class="col-12">
               <div class="row workrow">
-                <div class="work-card mb-4 col-lg-4" data-aos="fade-right">
+                <div class="work-card mb-4 col-lg-4" data-aos="{% cycle 'fade-right' 'fade-up' 'fade-left' %}">
+                  <a >
+                    <img
+                      src="{% static 'home/img/rescue.jpg' %}"
+                      alt="Image"
+                      class="img-fluid"
+                      data-pagespeed-url-hash="1104781227"
+                    />
+                    
+                </a>
+                <h3 class="text-black pt-8 " style="text-align:center">Rescue</h3>
+                </div>
+
+                <div class="work-card mb-4 col-lg-4" data-aos="{% cycle 'fade-right' 'fade-up' 'fade-left' %}">
                   <a >
                     <img
                       src="{% static 'home/img/rescue.jpg' %}"
@@ -224,75 +237,10 @@ We believe all animals deserve compassion and protection. We are working for the
                 <h3 class="text-black pt-8 " style="text-align:center">Rescue</h3>
                 </div>
                 
-                <div class="work-card mb-4 col-lg-4" data-aos="fade-up">
-                  <a class="hover-1">
-                    <img
-                      src="{% static 'home/img/care.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                  </a>
-                   <h3 class="text-black pt-8" style="text-align:center">Care</h3>
-                </div>
-                <div class="work-card mb-4 col-lg-4" data-aos="fade-left">
-                  <a  class="hover-1">
-                    <img
-                      src="{% static 'home/img/medical.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                  </a>
-                   <h3 class="text-black pt-8" style="text-align:center">Medical Treatment</h3>
-                </div>
-                
               </div>
             </div>
           </div>
-
-          <div class="row mb-5">
-            <div class="col-12">
-              <div class="row workrow">
-                <div class="work-card mb-4 col-lg-4" data-aos="fade-right">
-                  <a >
-                    <img
-                      src="{% static 'home/img/adoption.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                    
-                </a>
-                <h3 class="text-black pt-8" style="text-align:center">Adoption</h3>
-                </div>
-                
-                <div class="work-card mb-4 col-lg-4" data-aos="fade-up">
-                  <a class="hover-1">
-                    <img
-                      src="{% static 'home/img/awareness.png' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                  </a>
-                   <h3 class="text-black pt-8" style="text-align:center">Awareness</h3>
-                </div>
-                <div class="work-card mb-4 col-lg-4" data-aos="fade-left">
-                  <a  class="hover-1">
-                    <img
-                      src="{% static 'home/img/feeding.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                  </a>
-                   <h3 class="text-black pt-8" style="text-align:center">Feeding</h3>
-                </div>
-                
-              </div>
-            </div>
-          </div>
+          {% endfor %}
 
           
         </div>

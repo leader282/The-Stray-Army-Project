@@ -192,13 +192,14 @@ We encourage the community to protect all animals' lives by sharing the incredib
               </p>
             </div>
           </div>
-          <div class="row hover-1-wrap mb-5 mt-5">
+          {% for item in items %}
+          <div class="row hover-1-wrap mb-5">
             <div class="col-12">
               <div class="row">
-                <div class="mb-4 col-lg-6 order-lg-2" data-aos="fade-right">
+                <div {% if forloop.counter|divisibleby:2 %} class="mb-4 col-lg-6 order-lg-2" data-aos="fade-right" {% else %} class="mb-4 col-lg-6" data-aos="fade-left" {% endif %}>
                   <a href="index.html#" class="hover-1">
                     <img
-                      src="{% static 'home/img/shiro.jpg' %}"
+                      src="{{ item.image.url }}"
                       alt="Image"
                       class="img-fluid"
                       data-pagespeed-url-hash="1693781069"
@@ -206,8 +207,13 @@ We encourage the community to protect all animals' lives by sharing the incredib
                   </a>
                 </div>
                 <div
+                {% if forloop.counter|divisibleby:2 %}
                   class="col-lg-5 mr-auto align-self-center order-lg-1"
                   data-aos="fade-left"
+                {% else %}
+                  class="col-lg-5 mr-auto align-self-center"
+                  data-aos="fade-right"
+                {% endif %}
                 >
                   <h2 class="text-black">Meet Shiro, our One Happy Dog!</h2>
                   <p class="mb-4">
@@ -221,68 +227,7 @@ We encourage the community to protect all animals' lives by sharing the incredib
               </div>
             </div>
           </div>
-          <div class="row hover-1-wrap mb-5">
-            <div class="col-12">
-              <div class="row">
-                <div class="mb-4 col-lg-6" data-aos="fade-left">
-                  <a href="index.html#" class="hover-1">
-                    <img
-                      src="{% static 'home/img/hawkeye.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                  </a>
-                </div>
-                <div
-                  class="col-lg-5 ml-auto align-self-center"
-                  data-aos="fade-right"
-                >
-                  <h2 class="text-black">   The One-Eyed Hawkeye
-
-</h2>
-                  <p class="mb-4">
-           
-A victim of physical abuse, Bade Thakur was on the verge of dying due to beating by some of the demons of our society. His open wounds had become a feast for maggots who were eating him alive. We rushed him to the vet where he was given proper treatment. Unfortunately, we couldn't save his right eye. After months of treatment, care, dressing and medication, now he is rejoicing, playing and enjoying life every day.
-
-                  </p>
-            
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row hover-1-wrap mb-5">
-            <div class="col-12">
-              <div class="row">
-                <div class="mb-4 col-lg-6 order-lg-2" data-aos="fade-right">
-                  <a href="index.html#" class="hover-1">
-                    <img
-                      src="{% static 'home/img/musketeers.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1399281148"
-                    />
-                  </a>
-                </div>
-                <div
-                  class="col-lg-5 mr-auto align-self-center order-lg-1"
-                  data-aos="fade-left"
-                >
-                  <h2 class="text-black">The Three Musketeers
-</h2>
-                  <p class="mb-4">
-          
-
-Three puppies got stuck under a narrow pavement of a building and needed immediate help. We had to break the pavement in order to rescue them. Seeing the efforts, some of the people of the locality also came to lend a helping hand. We managed to break through and rescue the three 
-siblings. They were reunited with their family. All three of them later got adopted and are now live happily ever after.
-                  </p>
-               
-                </div>
-              </div>
-            </div>
-          </div>
-        
+          {% endfor %}
         </div>
       </section>
 <section class="gallery">

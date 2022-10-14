@@ -176,13 +176,14 @@
               </p>
             </div>
           </div>
+          {% for item in items %}
           <div class="row hover-1-wrap mb-5">
             <div class="col-12">
               <div class="row">
-                <div class="mb-4 col-lg-6 order-lg-2" data-aos="fade-right">
+                <div {% if forloop.counter|divisibleby:2 %} class="mb-4 col-lg-6 order-lg-2" data-aos="fade-right" {% else %} class="mb-4 col-lg-6" data-aos="fade-left" {% endif %}>
                   <a href="index.html#" class="hover-1">
                     <img
-                      src="{% static 'home/img/image1.jpg' %}"
+                      src="{{ item.image.url }}"
                       alt="Image"
                       class="img-fluid"
                       data-pagespeed-url-hash="1693781069"
@@ -190,53 +191,23 @@
                   </a>
                 </div>
                 <div
+                {% if forloop.counter|divisibleby:2 %}
                   class="col-lg-5 mr-auto align-self-center order-lg-1"
                   data-aos="fade-left"
-                >
-                  <h2 class="text-black">How we Save Street Lives</h2>
-                  <p class="mb-4">
-                    Every day we save animals with fractures, wounds, mange,
-                    viral diseases and much more. We vaccinate them against
-                    various illnesses, conduct adoption drives and educate the
-                    community about helping animals.
-                  </p>
-                  <p>
-                    <a href="index.html#" class="btn btn-primary">Read More</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row hover-1-wrap mb-5">
-            <div class="col-12">
-              <div class="row">
-                <div class="mb-4 col-lg-6" data-aos="fade-left">
-                  <a href="index.html#" class="hover-1">
-                    <img
-                      src="{% static 'home/img/image2.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                  </a>
-                </div>
-                <div
-                  class="col-lg-5 ml-auto align-self-center"
+                {% else %}
+                  class="col-lg-5 mr-auto align-self-center"
                   data-aos="fade-right"
+                {% endif %}
                 >
-                  <h2 class="text-black">Community Development</h2>
+                  <h2 class="text-black">{{ item.heading }}</h2>
                   <p class="mb-4">
-                    Rescue is our strategy to immediately relieve suffering and
-                    encourage the protection of all animals' lives by sharing
-                    their incredible stories of recovery and healing.
-                  </p>
-                  <p>
-                    <a href="index.html#" class="btn btn-primary">Read More</a>
+                    {{ item.description }}
                   </p>
                 </div>
               </div>
             </div>
           </div>
+          {% endfor %}
 
           <div class="row hover-1-wrap mb-5">
             <div class="col-12">
@@ -264,40 +235,7 @@
                     by filling out the form below:
                   </p>
                   <p>
-                    <a href="index.html#" class="btn btn-primary">Click Here</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row hover-1-wrap mb-5">
-            <div class="col-12">
-              <div class="row">
-                <div class="mb-4 col-lg-6" data-aos="fade-left">
-                  <a href="index.html#" class="hover-1">
-                    <img
-                      src="{% static 'home/img/image4.jpg' %}"
-                      alt="Image"
-                      class="img-fluid"
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                  </a>
-                </div>
-                <div
-                  class="col-lg-5 ml-auto align-self-center"
-                  data-aos="fade-right"
-                >
-                  <h2 class="text-black">So many Ways to Help</h2>
-                  <p class="mb-4">
-                    Our organization always appreciates the generosity and
-                    involvement of people like you, with every contribution
-                    going towards making thestrayarmy an even better Social
-                    Welfare Organization than it already is. With your help, we
-                    rescue thousands of animals each year from desperate
-                    situations.
-                  </p>
-                  <p>
-                    <a href="index.html#" class="btn btn-primary">Read More</a>
+                    <a href="https://forms.gle/zRAwqK53KsYkqPBM8" class="btn btn-primary">Click Here</a>
                   </p>
                 </div>
               </div>
