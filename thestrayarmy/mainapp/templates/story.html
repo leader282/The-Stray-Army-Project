@@ -201,7 +201,8 @@ We encourage the community to protect all animals' lives by sharing the incredib
                     <img
                       src="{{ item.image.url }}"
                       alt="Image"
-                      class="img-fluid"
+                      height="400px"
+                      width="550px"
                       data-pagespeed-url-hash="1693781069"
                     />
                   </a>
@@ -215,9 +216,9 @@ We encourage the community to protect all animals' lives by sharing the incredib
                   data-aos="fade-right"
                 {% endif %}
                 >
-                  <h2 class="text-black">Meet Shiro, our One Happy Dog!</h2>
+                  <h2 class="text-black">{{ item.heading }}</h2>
                   <p class="mb-4">
-                  Last year, because of person's careless driving, Shiro lost one of her hind legs. It had to be amputated. After weeks of consistent rest, care and medications, she stood up again. Recently, someone crushed her only hope to walk - her other hind leg broken. After a bone-pinning orthopaedic surgery, she is now in the recovery phase and within a couple of months, she will be all set to explore, play and enjoy the world again
+                  {{ item.description }}
 
                   </p>
                   {% comment %} <p>
@@ -244,7 +245,8 @@ We encourage the community to protect all animals' lives by sharing the incredib
                 <img
                   src="{{ adopter.image.url }}"
                   alt="Image"
-                  class="img-fluid"
+                  height="370px"
+                  width="240px"
                   data-pagespeed-url-hash="1104781227"
                 />
                 

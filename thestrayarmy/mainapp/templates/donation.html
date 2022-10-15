@@ -180,17 +180,17 @@
 
       <section class="site-section">
      <div class="container">
+          {% for donation in donate %}
           <div class="row hover-1-wrap mb-5 mt-5">
             <div class="col-12">
               <div class="row">
-
-
                 <div class="mb-4 col-lg-6 order-lg-2" data-aos="fade-right">
                   <a href="index.html#" class="hover-1">
                     <img
-                      src="{% static 'home/img/donate1.jpg' %}"
+                      src="{{ donation.image.url }}"
                       alt="Image"
-                      class="img-fluid"
+                      width="550px"
+                      height="380px"
                       data-pagespeed-url-hash="1693781069"
                     />
                   </a>
@@ -201,7 +201,7 @@
                 >
                   {% comment %} <h2 class="text-black">Treat on Street</h2> {% endcomment %}
                   <h2 class="mb-4">
-                  Your donation ensures that injured and ill ownerless animals are rescued and receive life-saving medical attention. Make your contribution towards a better and safe place for the strays to live peacefully.
+                  {{ donation.description }}
 
                   </h2>
                   {% comment %} <p>
@@ -211,6 +211,7 @@
               </div>
             </div>
           </div>
+          {% endfor %}
           </div>
           
       </section>

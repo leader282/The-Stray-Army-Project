@@ -165,7 +165,7 @@
 
 
       <section class="overflow-hidden bg-light" style:"min-height:500px">
-        <div class="about-bg">
+        <div class="about-bg" style=`background: url({{ background.image.url }})`>
           <h1 style="text-align: center; padding: 20%; color: #faf5ea">
             About us
           </h1>
@@ -196,7 +196,8 @@ Eventually, we realised the various problems the animals in the street were faci
                     <img
                       src="{{ item.image.url }}"
                       alt="Image"
-                      class="img-fluid"
+                      height="400px"
+                      width="550px"
                       data-pagespeed-url-hash="1693781069"
                     />
                   </a>

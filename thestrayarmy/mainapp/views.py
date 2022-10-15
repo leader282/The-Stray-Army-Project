@@ -18,9 +18,10 @@ def home(request):
 
 def about(request):
 
+    backimg = BackgroundNav.objects.all()
     aboutitems = About.objects.all()
     # return response with template and context
-    return render(request, "about.html", {'items': aboutitems})
+    return render(request, "about.html", {'items': aboutitems, 'background': backimg})
 
 
 def work(request):
@@ -53,16 +54,20 @@ def contact(request):
 
 def donate(request):
 
+    donate = Donation.objects.all()
     # return response with template and context
-    return render(request, "donation.html")
+    return render(request, "donation.html", {'donate': donate})
+
 def term(request):
 
     # return response with template and context
     return render(request, "terms.html")
+
 def privacy(request):
 
     # return response with template and context
     return render(request, "privacy.html")
+
 def refund(request):
 
     # return response with template and context

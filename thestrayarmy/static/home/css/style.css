@@ -6983,11 +6983,6 @@ small,
     font-size: 1.25rem;
 }
 
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-}
-
 .figure {
     display: inline-block;
 }
@@ -12490,7 +12485,6 @@ figure figcaption {
 
 .about-bg {
     height: 550px;
-    background: url("../img/group-dog1.jpg");
     /* object-fit: cover; */
     background-size: cover;
     background-repeat: no-repeat;
