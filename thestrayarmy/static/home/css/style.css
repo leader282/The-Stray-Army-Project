@@ -12125,7 +12125,7 @@ figure figcaption {
     display: block;
 }
 
-.hover-1-wrap .hover-1:after {
+/* .hover-1-wrap .hover-1:after {
     z-index: -1;
     content: "";
     position: absolute;
@@ -12143,7 +12143,7 @@ figure figcaption {
     right: -10px;
     bottom: -10px;
     position: absolute;
-}
+} */
 
 .paws {
     position: relative;
