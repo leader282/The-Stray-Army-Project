@@ -5,7 +5,7 @@
 {% load static %}
 <html lang="en">
   <head>
-    <title>The Stray Army | About</title>
+    <title>The Stray Army | Terms</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -53,7 +53,7 @@
 
     <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
 
-    {% comment %} <link rel="icon" type="image/x-icon" href="{% static 'home/images/favicon.ico' %}"> {% endcomment %}
+    <link rel="icon" type="image/x-icon" href="{% static 'home/img/favicon.ico' %}">
 <style>
   @media (min-width:1175px){
     .navbar-expand-lg .navbar-toggler {
@@ -345,6 +345,15 @@ The Stray Army @2022</h2>
         </div>
       </footer>
     </div>
+
+    <script>
+      var img_url = "{{backimg.image.url}}"
+      var style = document.createElement("style");
+      var css = ".about-bg {background-image: url('"+img_url+"')}";
+      console.log(css);
+      style.innerHTML = css;
+      document.head.appendChild(style);
+    </script>
 
     <script src="{% static 'home/js/jquery-3.3.1.min.js' %}"></script>
 

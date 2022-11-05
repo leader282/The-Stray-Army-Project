@@ -58,16 +58,16 @@ def donate(request):
     return render(request, "donation.html", {'donate': donate, 'backimg': donateHero[0]})
 
 def term(request):
-
+    termsHero = TermsHero.objects.all()
     # return response with template and context
-    return render(request, "terms.html")
+    return render(request, "terms.html", {'backimg': termsHero[0]})
 
 def privacy(request):
-
+    privacyHero = PrivacyHero.objects.all()
     # return response with template and context
-    return render(request, "privacy.html")
+    return render(request, "privacy.html", {'backimg': privacyHero[0]})
 
 def refund(request):
-
+    refundHero = RefundHero.objects.all()
     # return response with template and context
-    return render(request, "refund.html")
+    return render(request, "refund.html", {'backimg': refundHero[0]})

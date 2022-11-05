@@ -70,3 +70,12 @@ class ContactUsHero(models.Model):
 
 class DonateHero(models.Model):
     image = models.ImageField()
+
+class RefundHero(models.Model):
+    image = models.ImageField()
+
+class PrivacyHero(models.Model):
+    image = models.ImageField()
+
+class TermsHero(models.Model):
+    image = models.ImageField()
