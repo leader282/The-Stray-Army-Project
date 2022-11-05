@@ -5,7 +5,7 @@
 {% load static %}
 <html lang="en">
   <head>
-    <title>The Stray Army | About</title>
+    <title>The Stray Army | Contact Us</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -378,6 +378,15 @@ The Stray Army @2022</h2>
         </div>
       </footer>
     </div>
+
+    <script>
+      var img_url = "{{backimg.image.url}}"
+      var style = document.createElement("style");
+      var css = ".about-bg {background-image: url('"+img_url+"')}";
+      console.log(css);
+      style.innerHTML = css;
+      document.head.appendChild(style);
+    </script>
 
     <script src="{% static 'home/js/jquery-3.3.1.min.js' %}"></script>
 

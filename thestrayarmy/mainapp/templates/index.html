@@ -274,12 +274,9 @@
                 programmes include:
               </p>
               <ul class="list-unstyled ul-paw primary mb-0">
-                <li>Daily Feeding Drives</li>
-                <li>Winter Drives</li>
-                <li>Reflected Collar Drives</li>
-                <li>Anti-Rabies Drives</li>
-                <li>Adoption Carnival</li>
-                <li>Water Bowl Drives</li>
+                {% for about in aboutlist %}
+                <li>{{ about.heading }}</li>
+                {% endfor %}
               </ul>
             </div>
             <div
@@ -289,7 +286,7 @@
             >
            
                 <img
-                  src="{% static 'home/images/dog2.jpg' %}"
+                  src="{% static 'home/img/dog2.jpg' %}"
                   alt="Image"
                   class="img-fluid"
                   data-pagespeed-url-hash="781707137"
