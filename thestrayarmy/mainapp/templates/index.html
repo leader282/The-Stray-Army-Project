@@ -6,8 +6,9 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width, initial-scale=1.0,minimum-scale=1"
     />
+    
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i"
       rel="stylesheet"
@@ -119,7 +120,9 @@
  
              
               <a href="/" class="h2 mb-0 navbar-brand">
-                <img src="{% static 'home/img/logo-big.png' %}" height="100px" style="margin-left: 20px; margin-top: 20px;">
+                <img src="{% static 'home/img/logo-big.png' %}"
+                 {% comment %} height="100px" {% endcomment %}
+                  style="margin-top: 20px;">
               </img>
 
               </a>
@@ -225,8 +228,9 @@
                     <img
                       src="{{ item.image.url }}"
                       alt="Image"
-                      height="350px"
-                      width="550px"
+                      style="max-width:100%;max-height:100%"
+                      {% comment %} height="350px"
+                      width="550px" {% endcomment %}
                       data-pagespeed-url-hash="1693781069"
                     />
                   </a>
@@ -236,7 +240,7 @@
                   class="col-lg-5 mr-auto align-self-center order-lg-1"
                   data-aos="fade-left"
                 {% else %}
-                  class="col-lg-5 mr-auto align-self-center"
+                  class="col-lg-5 ml-auto align-self-center"
                   data-aos="fade-right"
                 {% endif %}
                 >
