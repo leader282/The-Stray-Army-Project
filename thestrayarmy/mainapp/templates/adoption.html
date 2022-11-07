@@ -93,6 +93,11 @@
     display: none !important;
 }
 }
+.adoptdiv .work-card{
+      display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 </style>
   </head>
   <body
@@ -207,7 +212,7 @@ Fill the form below to adopt a dog and we will connect with you soon.</p>
           </div>
           
 <section class="gallery">
-    <div class="container">
+    <div class="container adoptdiv">
       {% for adoption in adoptions %}
       {% if forloop.counter0|divisibleby:3 %}
       <div class="row mb-5 ml-auto mr-auto">
@@ -219,12 +224,12 @@ Fill the form below to adopt a dog and we will connect with you soon.</p>
                 <img
                   src="{{ adoption.image.url }}"
                   alt="Image"
-                  height="520px"
-                  width="350px"
+                  {% comment %} height="520px" {% endcomment %}
+                  {% comment %} width="350px" {% endcomment %}
                   data-pagespeed-url-hash="1104781227"
                 />
               </a>
-              <h3 class="text-black pt-8 " style="text-align:center">#{{ adoption.description }}</h3>
+              <h3 class="text-black pt-8 " style="text-align:center ">#{{ adoption.description }}</h3>
           
             </div>
           {% if forloop.counter|divisibleby:3 %}

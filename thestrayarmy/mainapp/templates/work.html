@@ -217,7 +217,7 @@ We believe all animals deserve compassion and protection. We are working for the
           {% for item in items %}
           {% if forloop.counter0|divisibleby:3 %}
           <div class="row mb-5">
-            <div class="col-12">
+            <div class="col-12 workpage" style="max-width:1335px">
               <div class="row workrow">
           {% endif %}
                 <div class="work-card mb-4 col-lg-4" {% if forloop.counter0|divisibleby:3 %} data-aos="fade-right" {% endif %} {% if forloop.counter|divisibleby:3 %} data-aos="fade-left" {% else %} data-aos="fade-up" {% endif %} >
@@ -225,8 +225,8 @@ We believe all animals deserve compassion and protection. We are working for the
                     <img
                       src="{{ item.image.url }}"
                       alt="Image"
-                      height="580px"
-                      width="350px"
+                      {% comment %} height="580px" {% endcomment %}
+                      {% comment %} width="350px" {% endcomment %}
                       data-pagespeed-url-hash="1104781227"
                     />
                     

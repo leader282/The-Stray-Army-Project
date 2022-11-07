@@ -91,11 +91,18 @@
     display: none !important;
 }
 }
-@media (max-width:1200px){
+{% comment %} @media (max-width:1200px){
   .work-card{
     width:25%;
   }
-}
+} {% endcomment %}
+ @media(min-width: 992px) {
+                    .story .work-card {
+                        flex-basis: 22%;
+                    }
+                }
+    
+
 </style>
   </head>
   <body
@@ -250,7 +257,7 @@ We encourage the community to protect all animals' lives by sharing the incredib
       {% for adopter in adopters %}
       {% if forloop.counter0|divisibleby:4 %}
       <div class="row mb-5 ml-auto mr-auto">
-        <div class="col-12">
+        <div class="col-12 story"  style="max-width:1335px">
           <div class="row workrow">
       {% endif %}
             <div class="work-card mb-4 col-lg-3" {% if forloop.counter0|divisibleby:4 %} data-aos="fade-right" {% endif %} {% if forloop.counter|divisibleby:4 %} data-aos="fade-left" {% endif %} {% if forloop.counter|divisibleby:2 %} data-aos="fade-up" {% else %} data-aos="fade-down" {% endif %}>
@@ -258,8 +265,8 @@ We encourage the community to protect all animals' lives by sharing the incredib
                 <img
                   src="{{ adopter.image.url }}"
                   alt="Image"
-                  height="370px"
-                  width="240px"
+                  {% comment %} height="370px" {% endcomment %}
+                  {% comment %} width="240px"  {% endcomment %}
                   data-pagespeed-url-hash="1104781227"
                 />
                 

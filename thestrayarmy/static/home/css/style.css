@@ -12510,17 +12510,27 @@ figure figcaption {
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             text-align: center;
         }
+                @media(min-width: 1123px) {
+                    .workpage .work-card {
+                        flex-basis: 32%;
+                    }
+                }
     
         .work-card:hover {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
-    
         .workrow {
             gap: 15px;
-            flex-wrap: nowrap;
+            /* flex-wrap: nowrap; */
+            flex-flow: row wrap;
+            justify-content: center;
         }
-    
+        .workrow img{
+            max-height:100%;
+            max-width: 100%;
+        }
+
         .pt-8 {
             padding-top: 8px;
         }
