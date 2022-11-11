@@ -7947,17 +7947,41 @@ input[type="button"].btn-block {
     margin-bottom: 0;
     list-style: none;
 }
-.navbar-brand img{
+/* .navbar-brand img{
     max-height: 100%;
     width: 200px;
-}
-@media (max-width: 330px) {
+} */
+@media (max-width: 650px) {
     
-        .navbar-brand img {
-            max-height: 100%;
-            width: 150px;
-        }
+    .navbar-brand img {
+        max-height: 100%;
+        width: 400px;
     }
+}
+
+@media (max-width: 510px) {
+
+    .navbar-brand img {
+        max-height: 100%;
+        width: 300px;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .navbar-brand img {
+        max-height: 100%;
+        width: 250px;
+    }
+}
+
+@media (max-width: 280px) {
+
+    .navbar-brand img {
+        max-height: 100%;
+        width: 170px;
+    }
+}
 .navbar-nav .nav-link {
     padding-right: 0;
     padding-left: 0;
