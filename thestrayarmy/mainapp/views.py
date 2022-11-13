@@ -22,6 +22,10 @@ def about(request):
     # return response with template and context
     return render(request, "about.html", {'items': aboutitems, 'backimg': aboutHero[0]})
 
+def boarding(request):
+    boardingHero = BoardingHero.objects.all()
+    boardingitems = Boarding.objects.all()
+    return render(request, "boarding.html", {'items': boardingitems, 'backimg': boardingHero[0]})
 
 def work(request):
     whatwedoHero = WhatwedoHero.objects.all()

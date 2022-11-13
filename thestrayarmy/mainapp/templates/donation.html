@@ -52,6 +52,47 @@
 
     <link rel="icon" type="image/x-icon" href="{% static 'home/img/favicon.ico' %}">
 <style>
+
+  .support {
+    margin-top: 10px;
+  }
+
+  .donate_link1 {
+    border: 1px solid magenta;
+    padding: 7px 43px;
+    border-radius: 20px;
+    color: magenta;
+  }
+
+  .donate_link1:hover {
+    color: white;
+    background-color: magenta;
+  }
+
+  .donate_link2 {
+    border: 1px solid cyan;
+    padding: 7px 32px;
+    border-radius: 20px;
+    color: cyan;
+  }
+
+  .donate_link2:hover {
+    color: white;
+    background-color: cyan;
+  }
+
+  .donate_link3 {
+    border: 1px solid blue;
+    padding: 7px 30px;
+    border-radius: 20px;
+    color: blue;
+  }
+
+  .donate_link3:hover {
+    color: white;
+    background-color: blue;
+  }
+
   @media (min-width:1175px){
     .navbar-expand-lg .navbar-toggler {
     display: none;
@@ -139,6 +180,10 @@
    <a href="about" class="nav-link"
                     >About</a>
       </li>
+      <li class="nav-item active">
+        <a href="boarding" class="nav-link"
+                    >Dog Boarding</a>
+      </li>
       <li class="nav-item">
           <a href="work" class="nav-link"
                     >What We Do</a
@@ -173,57 +218,6 @@
   </div>
 </nav>
 
-         
-
-
-
-      <section class="overflow-hidden bg-light" style:"min-height:500px">
-        <div class="about-bg">
-          <h1 style="text-align: center; padding: 20%; color: #faf5ea">
-            Donate
-          </h1>
-        </div>
-      </section>
-
-      <section class="site-section">
-     <div class="container">
-          {% for donation in donate %}
-          <div class="row hover-1-wrap mb-5 mt-5">
-            <div class="col-12">
-              <div class="row">
-                <div class="mb-4 col-lg-6 order-lg-2" data-aos="fade-right">
-                  <a href="#" class="hover-1">
-                    <img
-                      src="{{ donation.image.url }}"
-                      alt="Image"
-                      style="max-width:100%;max-height:100%"
-                      {% comment %} width="550px"
-                      height="380px" {% endcomment %}
-                      data-pagespeed-url-hash="1693781069"
-                    />
-                  </a>
-                </div>
-                <div
-                  class="col-lg-5 mr-auto align-self-center order-lg-1"
-                  data-aos="fade-left"
-                >
-                  {% comment %} <h2 class="text-black">Treat on Street</h2> {% endcomment %}
-                  <h2 class="mb-4">
-                  {{ donation.description }}
-
-                  </h2>
-                  {% comment %} <p>
-                    <a href="index.html#" class="btn btn-primary">Read More</a>
-                  </p> {% endcomment %}
-                </div>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-          </div>
-          
-      </section>
-
       <section  id="contact-section" style="padding-bottom:45px;padding-top:3rem;">
         <div class="container">
           <div class="row ">
@@ -237,41 +231,49 @@
                   </div>
                   <h2 class="text-white mb-5">You are just a step away from contributing towards humanity!</h2>
                   <h4 class="text-white"> Every small help will have a bigger impact!</h4>
+                  <br><br>
+                  <h5 style="color:white; font-weight: bold">Support Us</h5>
                   <ul class="list-unstyled address">
                     <li>
                       <span class="d-block">MILAAP Fundraiser</span>
-                      <p>    <a
-                      class="btn btn-primary"
+                      <p class="support">    <a
+                      class="donate_link1"
                       href="https://milaap.org/fundraisers/support-the-stray-dogs"
                     
                     >Donate</a></p>
                     </li>
                     <li>
                       <span class="d-block">Paypal</span>
-                      <p>    <a
-                      class="btn btn-primary"
+                      <p class="support">    <a
+                      class="donate_link2"
                       href="https://www.paypal.com/paypalme/thestrayarmy"
                     
-                    >Donate</a></p>
+                    ><i class="fab fa-paypal" style="margin-right: 8px;"></i>Donate</a></p>
                     </li>
                     <li>
                       <span class="d-block">Patreon</span>
-                      <p>    <a
-                      class="btn btn-primary"
+                      <p class="support">    <a
+                      class="donate_link3"
                       href="https://www.patreon.com/thestrayarmy"
                     
-                    >Donate</a></p>
+                    ><i class="fa-brands fa-patreon" style="margin-right: 8px;"></i>Donate</a></p>
                     </li>
                    
 
                   </ul>
 
+                  <br><br>
+                  <h5 style="color:white; font-weight: bold">Paytm / GPay / PhonePe</h5>
+                  <p style="color:white">9931425381</p>
+                  <h5 style="color:white; font-weight: bold">Upi ID</h1>
+                  <p style="color:white">9931425381@paytm</p>
 
-                            <p style="color:white">Paytm / GPay / PhonePe</br>
-9931425381</p>
-<p  style="color:white">
-Upi ID</br>
-9931425381@paytm</p>
+                  <h5 style="color:white; font-weight: bold">Bank Account</h1>
+                  <p style="color:white">
+                    Name - The Stray Army Charitable Trust<br>
+                    Account Number - 4097 2454 778<br>
+                    IFSC Code - SBIN0004660
+                  </p>
 
 
                 </div>
@@ -279,6 +281,46 @@ Upi ID</br>
             </div>
           </div>
         </div>
+
+        <div class="site-section">
+          <div class="container">
+               {% for donation in donate %}
+               <div class="row hover-1-wrap mb-5 mt-5">
+                 <div class="col-12">
+                   <div class="row">
+                     <div class="mb-4 col-lg-6 order-lg-2" data-aos="fade-right">
+                       <a href="#" class="hover-1">
+                         <img
+                           src="{{ donation.image.url }}"
+                           alt="Image"
+                           style="max-width:100%;max-height:100%"
+                           {% comment %} width="550px"
+                           height="380px" {% endcomment %}
+                           data-pagespeed-url-hash="1693781069"
+                         />
+                       </a>
+                     </div>
+                     <div
+                       class="col-lg-5 mr-auto align-self-center order-lg-1"
+                       data-aos="fade-left"
+                     >
+                       {% comment %} <h2 class="text-black">Treat on Street</h2> {% endcomment %}
+                       <h2 class="mb-4">
+                       {{ donation.description }}
+     
+                       </h2>
+                       {% comment %} <p>
+                         <a href="index.html#" class="btn btn-primary">Read More</a>
+                       </p> {% endcomment %}
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               {% endfor %}
+               </div>
+               
+        </div>
+
         <footer class="site-footer" style="margin-top: 30px">
           <div class="container">
             <div class="row">
@@ -304,6 +346,10 @@ Upi ID</br>
                         <a href="about" class="smoothscroll"
                           >About Us</a
                         >
+                      </li>
+                      <li>
+                        <a href="boarding" class="smoothscroll"
+                                    >Dog Boarding</a>
                       </li>
                       <li>
                         <a href="work" class="smoothscroll"
@@ -397,7 +443,7 @@ Upi ID</br>
             </div>
           </div>
         </footer>
-    </section>
+      </section>
     </div>
 
     <script>

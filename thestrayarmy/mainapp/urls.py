@@ -13,4 +13,5 @@ urlpatterns = [
     path('terms', views.term),
     path('privacy', views.privacy),
     path('refund', views.refund),
+    path('boarding', views.boarding),
 ]

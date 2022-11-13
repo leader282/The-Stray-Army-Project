@@ -18,6 +18,17 @@ class About(models.Model):
     def __str__(self):
         return self.heading
 
+class BoardingHero(models.Model):
+    image = models.ImageField()
+
+class Boarding(models.Model):
+    heading = models.CharField(max_length=20000)
+    description = models.CharField(max_length=20000)
+    image = models.ImageField()
+
+    def __str__(self):
+        return self.heading
+
 class AboutHero(models.Model):
     image = models.ImageField()
 
