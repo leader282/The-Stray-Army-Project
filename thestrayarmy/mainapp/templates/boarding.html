@@ -91,6 +91,22 @@
     display: none !important;
 }
 }
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+
+}
+
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+
+}
 </style>
   </head>
   <body
@@ -239,7 +255,9 @@
             </div>
           </div>
           {% endfor %}
-
+          <div class="map-responsive">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.3224335064947!2d86.11336721496552!3d22.90147518501461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e76dd28e6e3f%3A0xb31177acdbaed17d!2sTSA%20Dog%20Boarding%20%26%20Fostering%20Home!5e0!3m2!1sen!2sin!4v1668823438247!5m2!1sen!2sin" width="800" height="600" style="border:0; display:block; margin-right:auto;margin-left:auto" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
       </section>
 
