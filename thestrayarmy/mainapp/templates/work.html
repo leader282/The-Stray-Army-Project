@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
-<html lang="en">
+{% block header %}
   <head>
     <title>The Stray Army | Work</title>
     <meta charset="utf-8" />
@@ -93,288 +93,86 @@
 }
 </style>
   </head>
-  <body
-    data-spy="scroll"
-    data-target=".site-navbar-target"
-    data-offset="300"
-    id="home-section"
-  >
-    {% comment %}
-    <div id="overlayer"></div>
-    {% endcomment %} {% comment %}
-    <div class="loader">
-      {% endcomment %} {% comment %}
-      <div class="spinner-border text-primary" role="status">
-        <span class="sr-only">Loading...</span>
-      </div>
-      {% endcomment %} {% comment %}
-    </div>
-    {% endcomment %}
-    <div class="site-wrap">
-     
-     
-          {% comment %} <div class="col-12 d-none d-xl-block"> {% endcomment %}
-      
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
- 
-             
-              <a href="/" class="h2 mb-0 navbar-brand">
-                <img src="{% static 'home/img/logo-big.png' %}" style="margin-top: 20px;">
-              </img>
+{% endblock %}
 
-              </a>
-     
-          
- 
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarToggler">
-    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-      <li class="nav-item">
-       <a href="/" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item active">
-   <a href="about" class="nav-link"
-                    >About</a>
-      </li>
-      <li class="nav-item active">
-        <a href="boarding" class="nav-link"
-                    >Dog Boarding</a>
-      </li>
-      <li class="nav-item">
-          <a href="work" class="nav-link"
-                    >What We Do</a
-                  >
-      </li>
-      <li class="nav-item">
-           <a href="stories" class="nav-link"
-                    >Success Stories</a
-                  >
-      </li>
-      <li class="nav-item">
-           <a href="adopt" class="nav-link"
-                    >Up for Adoption</a
-                  >
-      </li>
-      <li class="nav-item">
-             <a href="contact" class="nav-link"
-                    >Contact Us</a
-                  >
-      </li>
-      <li class="nav-item">
-            <span>
-                   <a
-                    class="btn btn-primary"
-                    href="donate"
-                  
-                  >Donate</a>
-                  </span>
-      </li>
-    </ul>
-
+{% block section %}
+<section class="overflow-hidden bg-light" style:"min-height:500px">
+  <div class="about-bg">
+    <h1 style="text-align: center; padding: 20%; color: #faf5ea">
+      What we do
+    </h1>
   </div>
-</nav>
+</section>
 
-         
+<section class="site-section">
+  <div class="container">
 
-
-
-      <section class="overflow-hidden bg-light" style:"min-height:500px">
-        <div class="about-bg">
-          <h1 style="text-align: center; padding: 20%; color: #faf5ea">
-            What we do
-          </h1>
-        </div>
-      </section>
-
-      <section class="site-section">
-        <div class="container">
- 
-          <div class="row  mb-5 mt-5">
-            <div class="col-12">
-              <div class="row">
-                <div class="mb-4 col-lg-6 order-lg-1" data-aos="fade-right">
-                    <h1 class="text-black">What we do</h1>
-                  <h2>
+    <div class="row  mb-5 mt-5">
+      <div class="col-12">
+        <div class="row">
+          <div class="mb-4 col-lg-6 order-lg-1" data-aos="fade-right">
+              <h1 class="text-black">What we do</h1>
+            <h2>
 Working now and forever for the well-being of animals including rescue, care, medical treatment, adoption, awareness events and many more...
-                  </h2>
-                </div>
-                <div
-                  class="col-lg-5 ml-auto align-self-center order-lg-2"
-                  data-aos="fade-left"
-                >
-                  <p class="mb-4" >
-                  Our mission is to rescue and treat the unowned street animals of Jamshedpur, who have become ill or injured, and through their rescue, inspire a community to protect and defend the lives of all animals.
+            </h2>
+          </div>
+          <div
+            class="col-lg-5 ml-auto align-self-center order-lg-2"
+            data-aos="fade-left"
+          >
+            <p class="mb-4" >
+            Our mission is to rescue and treat the unowned street animals of Jamshedpur, who have become ill or injured, and through their rescue, inspire a community to protect and defend the lives of all animals.
 We believe all animals deserve compassion and protection. We are working for the day when all animals' lives will be respected for their inherent value, whether dogs, chickens or fish
 
-                  </p>
-                  {% comment %} <p>
-                    <a href="index.html#" class="btn btn-primary">Read More</a>
-                  </p> {% endcomment %}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {% for item in items %}
-          {% if forloop.counter0|divisibleby:3 %}
-          <div class="row mb-5">
-            <div class="col-12 workpage" style="max-width:1335px">
-              <div class="row workrow">
-          {% endif %}
-                <div class="work-card mb-4 col-lg-4" {% if forloop.counter0|divisibleby:3 %} data-aos="fade-right" {% endif %} {% if forloop.counter|divisibleby:3 %} data-aos="fade-left" {% else %} data-aos="fade-up" {% endif %} >
-                  <a >
-                    <img
-                      src="{{ item.image.url }}"
-                      alt="Image"
-                      style="max-width:100%;max-height:100%"
-                      {% comment %} height="580px" {% endcomment %}
-                      {% comment %} width="350px" {% endcomment %}
-                      data-pagespeed-url-hash="1104781227"
-                    />
-                    
-                  </a>
-                  <h3 class="text-black pt-8 " style="text-align:center">{{ item.description }}</h3>
-                </div>
-              {% if forloop.counter|divisibleby:3 %}
-              </div>
-            </div>
-          </div>
-          {% endif %}
-          {% endfor %}
-
-          
-        </div>
-      </section>
-<section class="overflow-hidden bg-light" style:"min-height:500px">
-        <div class="work-bg">
-          <h1 style="text-align: center; padding: 20%; color: #faf5ea">
-            Spread Love Among the Community
-          </h1>
-        </div>
-      </section>
-            <footer class="site-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-9">
-              <div class="row">
-                <div class="col-md-5">
-                  <h2 class="footer-heading mb-4">Every animal deserves a second chance...</h2>
-                  <p>
-                    
-Working for a cause!
-                  </p>
-                </div>
-                <div class="col-md-3 ml-auto">
-                  <h2 class="footer-heading mb-4">Quick Links</h2>
-                  <ul class="list-unstyled">
-                    <li>
-                      <a href="/" class="smoothscroll"
-                        >Home</a
-                      >
-                    </li>
-
-                    <li>
-                      <a href="about" class="smoothscroll"
-                        >About Us</a
-                      >
-                    </li>
-                    <li>
-                      <a href="work" class="smoothscroll"
-                        >What We Do</a
-                      >
-                    </li>
-
-                    <li>
-                      <a href="stories" class="smoothscroll"
-                        >Success Stories</a>
-                      
-                    </li>
-                    <li>
-                      <a href="adopt" class="smoothscroll"
-                        >Up for Adoption</a
-                      >
-                    </li>
-
-                    <li>
-                      <a href="contact" class="smoothscroll"
-                        >Contact Us</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-md-4">
-                  <h2 class="footer-heading mb-4">Follow Us</h2>
-                  <a href="https://www.facebook.com/thestrayarmy" class="pl-0 pr-3"
-                    ><span
-                      class="fa fa-facebook-f"
-                      style="font-size: 1.2rem"
-                    ></span
-                  ></a>
-                  <a href="mailto:thestrayarmy@gmail.com" class="pl-3 pr-3"
-                    ><span
-                      class="fa fa-envelope"
-                      style="font-size: 1.2rem"
-                    ></span
-                  ></a>
-
-                  <a href="https://www.instagram.com/thestrayarmy/" class="pl-3 pr-3"
-                    ><span
-                      class="fa fa-instagram"
-                      style="font-size: 1.2rem"
-                    ></span
-                  ></a>
-                  <a href="https://twitter.com/thestrayarmy" class="pl-3 pr-3"
-                    ><span
-                      class="fa fa-twitter"
-                      style="font-size: 1.2rem"
-                    ></span
-                  ></a>
-
-                  <a href="https://www.youtube.com/channel/UCCCfd5YG4kOvQFsWPeI3xhA/" class="pl-3 pr-3"
-                    ><span
-                      class="fa fa-youtube-play"
-                      style="font-size: 1.2rem"
-                    ></span
-                  ></a>
-                </div>
-              </div>
-            </div>
-        
- <div class="col-md-3 ml-auto">
-                  <h2 class="footer-heading mb-4">
-Copyright ©</br>
-The Stray Army @2022</h2>
-                  <ul class="list-unstyled">
-                    <li>
-                      <a href="terms" class="smoothscroll"
-                        >Terms and Conditions</a
-                      >
-                    </li>
-
-                    <li>
-                      <a href="privacy" class="smoothscroll"
-                        >Privacy Policy</a
-                      >
-                    </li>
-                    <li>
-                      <a href="refund" class="smoothscroll"
-                        >Refund and Cancellation Policy</a
-                      >
-                    </li>
-
-                
-                  
-                  </ul>
-                </div>
-
+            </p>
+            {% comment %} <p>
+              <a href="index.html#" class="btn btn-primary">Read More</a>
+            </p> {% endcomment %}
           </div>
         </div>
-      </footer>
+      </div>
     </div>
 
+    {% for item in items %}
+    {% if forloop.counter0|divisibleby:3 %}
+    <div class="row mb-5">
+      <div class="col-12 workpage" style="max-width:1335px">
+        <div class="row workrow">
+    {% endif %}
+          <div class="work-card mb-4 col-lg-4" {% if forloop.counter0|divisibleby:3 %} data-aos="fade-right" {% endif %} {% if forloop.counter|divisibleby:3 %} data-aos="fade-left" {% else %} data-aos="fade-up" {% endif %} >
+            <a >
+              <img
+                src="{{ item.image.url }}"
+                alt="Image"
+                style="max-width:100%;max-height:100%"
+                {% comment %} height="580px" {% endcomment %}
+                {% comment %} width="350px" {% endcomment %}
+                data-pagespeed-url-hash="1104781227"
+              />
+              
+            </a>
+            <h3 class="text-black pt-8 " style="text-align:center">{{ item.description }}</h3>
+          </div>
+        {% if forloop.counter|divisibleby:3 %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+    
+  </div>
+</section>
+<section class="overflow-hidden bg-light" style:"min-height:500px">
+  <div class="work-bg">
+    <h1 style="text-align: center; padding: 20%; color: #faf5ea">
+      Spread Love Among the Community
+    </h1>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
     <script>
       var img_url = "{{backimg.image.url}}"
       var style = document.createElement("style");
@@ -391,6 +189,4 @@ The Stray Army @2022</h2>
     <script src="{% static 'home/js/util.js' %}"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-
-  </body>
-</html>
+{% endblock %}

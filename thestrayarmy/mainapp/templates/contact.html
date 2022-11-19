@@ -1,9 +1,6 @@
-
-
-
-<!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
-<html lang="en">
+{% block header %}
   <head>
     <title>The Stray Army | Contact Us</title>
     <meta charset="utf-8" />
@@ -95,310 +92,101 @@
 }
 }
 </style>
-  </head>
-  <body
-    data-spy="scroll"
-    data-target=".site-navbar-target"
-    data-offset="300"
-    id="home-section"
-  >
-    {% comment %}
-    <div id="overlayer"></div>
-    {% endcomment %} {% comment %}
-    <div class="loader">
-      {% endcomment %} {% comment %}
-      <div class="spinner-border text-primary" role="status">
-        <span class="sr-only">Loading...</span>
-      </div>
-      {% endcomment %} {% comment %}
-    </div>
-    {% endcomment %}
-    <div class="site-wrap">
-     
-     
-          {% comment %} <div class="col-12 d-none d-xl-block"> {% endcomment %}
-      
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
- 
-             
-              <a href="/" class="h2 mb-0 navbar-brand">
-                <img src="{% static 'home/img/logo-big.png' %}"  style=" margin-top: 20px;">
-              </img>
+</head>
+{% endblock %}
 
-              </a>
-     
-          
- 
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarToggler">
-    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-      <li class="nav-item">
-       <a href="/" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item active">
-   <a href="about" class="nav-link"
-                    >About</a>
-      </li>
-      <li class="nav-item active">
-        <a href="boarding" class="nav-link"
-                    >Dog Boarding</a>
-      </li>
-      <li class="nav-item">
-          <a href="work" class="nav-link"
-                    >What We Do</a
-                  >
-      </li>
-      <li class="nav-item">
-           <a href="stories" class="nav-link"
-                    >Success Stories</a
-                  >
-      </li>
-      <li class="nav-item">
-           <a href="adopt" class="nav-link"
-                    >Up for Adoption</a
-                  >
-      </li>
-      <li class="nav-item">
-             <a href="contact" class="nav-link"
-                    >Contact Us</a
-                  >
-      </li>
-      <li class="nav-item">
-            <span>
-                   <a
-                    class="btn btn-primary"
-                    href="donate"
-                  
-                  >Donate</a>
-                  </span>
-      </li>
-    </ul>
-
+{% block section %}
+<section class="overflow-hidden bg-light" style:"min-height:500px">
+  <div class="about-bg">
+    <h1 style="text-align: center; padding: 20%; color: #faf5ea">
+      Contact Us
+    </h1>
   </div>
-</nav>
-
-         
-
-
-
-
-      <section class="overflow-hidden bg-light" style:"min-height:500px">
-        <div class="about-bg">
-          <h1 style="text-align: center; padding: 20%; color: #faf5ea">
-            Contact Us
-          </h1>
-        </div>
-      </section>
+</section>
 <section  id="contact-section" style="padding-bottom:45px;padding-top:3rem;">
-        <div class="container">
-          <div class="row ">
-      <div class="col-lg-12 bg-secondary">
-              <div class="row justify-content-center align-items-center h-100">
-                <div
-                  class="col-lg-6 text-center heading-section mb-5 align-self-center"
-                >
-                  <div class="paws">
-                    <span class="icon-paw"></span>
-                  </div>
-                  <h2 class="text-white mb-5">Contact Us</h2>
-                  <ul class="list-unstyled address">
-                    <li>
-                      <span class="d-block">Address:</span>
-                      <p>Mango, Jamshedpur- 831012</p>
-                    </li>
-                    <li>
-                      <span class="d-block">Phone:</span>
-                      <p>+91 9931425381, +91 7609874246</p>
-                    </li>
-                    <li>
-                      <span class="d-block">Email:</span>
-                      <p>
-                        <a
-                          class="__cf_email__"
-                          
-                          >thestrayarmy@gmail.com</a
-                        >
-                      </p>
-                    </li>
+  <div class="container">
+    <div class="row ">
+<div class="col-lg-12 bg-secondary">
+        <div class="row justify-content-center align-items-center h-100">
+          <div
+            class="col-lg-6 text-center heading-section mb-5 align-self-center"
+          >
+            <div class="paws">
+              <span class="icon-paw"></span>
+            </div>
+            <h2 class="text-white mb-5">Contact Us</h2>
+            <ul class="list-unstyled address">
+              <li>
+                <span class="d-block">Address:</span>
+                <p>Mango, Jamshedpur- 831012</p>
+              </li>
+              <li>
+                <span class="d-block">Phone:</span>
+                <p>+91 9931425381, +91 7609874246</p>
+              </li>
+              <li>
+                <span class="d-block">Email:</span>
+                <p>
+                  <a
+                    class="__cf_email__"
+                    
+                    >thestrayarmy@gmail.com</a
+                  >
+                </p>
+              </li>
 
 
-                  </ul>
-                  <ul class="social-listing">
+            </ul>
+            <ul class="social-listing">
 <li><a href="https://www.facebook.com/thestrayarmy" class=" text-center py-3 ">
-   <span class="fa fa-facebook-f" style="font-size:1.2rem"></span>
+<span class="fa fa-facebook-f" style="font-size:1.2rem"></span>
 
 </a>
 </li>
 <li><a href="mailto:thestrayarmy@gmail.com" class="text-center py-3">
-   <span class="fa fa-envelope" style="font-size:1.2rem"></span>
-   </a>
+<span class="fa fa-envelope" style="font-size:1.2rem"></span>
+</a>
 </li>
 <li><a href="https://www.instagram.com/thestrayarmy/" class=" text-center py-3 ">
-   <span class="fa fa-instagram" style="font-size:1.2rem"></span>
-   </a>
+<span class="fa fa-instagram" style="font-size:1.2rem"></span>
+</a>
 </li>
 <li><a href="https://twitter.com/thestrayarmy" class=" text-center py-3 ">
-   <span class="fa fa-twitter" style="font-size:1.2rem"></span>
-   </a>
+<span class="fa fa-twitter" style="font-size:1.2rem"></span>
+</a>
 </li>
 <li><a href="https://www.youtube.com/channel/UCCCfd5YG4kOvQFsWPeI3xhA/" class=" text-center py-3 ">
-   <span class="fa fa-youtube-play" style="font-size:1.2rem"></span>
-   </a>
+<span class="fa fa-youtube-play" style="font-size:1.2rem"></span>
+</a>
 </li>
-							</ul> 
+        </ul> 
 
 <p class="text-white " style="padding-top:15px">To adopt a Stray, visit the Up for Adoption page and fill the form. We will get in touch with you soon.</p>
 <p class="text-white">For questions about your donations or different donation methods, visit the ‘Donate’ page.</p>
 <p class="text-white">For other queries, write an email to us at thestrayarmy@gmail.com and we will get in touch with you soon.</p>
 
-                </div>
-              </div>
-            </div>
           </div>
-        </div>
-    </section>
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-9">
-            <div class="row">
-              <div class="col-md-5">
-                <h2 class="footer-heading mb-4">Every animal deserves a second chance...</h2>
-                <p>
-                  
-Working for a cause!
-                </p>
-              </div>
-              <div class="col-md-3 ml-auto">
-                <h2 class="footer-heading mb-4">Quick Links</h2>
-                <ul class="list-unstyled">
-                  <li>
-                    <a href="/" class="smoothscroll"
-                      >Home</a
-                    >
-                  </li>
-
-                  <li>
-                    <a href="about" class="smoothscroll"
-                      >About Us</a
-                    >
-                  </li>
-                  <li>
-                    <a href="boarding" class="smoothscroll"
-                                >Dog Boarding</a>
-                  </li>
-                  <li>
-                    <a href="work" class="smoothscroll"
-                      >What We Do</a
-                    >
-                  </li>
-
-                  <li>
-                    <a href="stories" class="smoothscroll"
-                      >Success Stories</a>
-                    
-                  </li>
-                  <li>
-                    <a href="adopt" class="smoothscroll"
-                      >Up for Adoption</a
-                    >
-                  </li>
-
-                  <li>
-                    <a href="contact" class="smoothscroll"
-                      >Contact</a
-                    >
-                  </li>
-                </ul>
-              </div>
-              <div class="col-md-4">
-                <h2 class="footer-heading mb-4">Follow Us</h2>
-                <a href="https://www.facebook.com/thestrayarmy" class="pl-0 pr-3"
-                  ><span
-                    class="fa fa-facebook-f"
-                    style="font-size: 1.2rem"
-                  ></span
-                ></a>
-                <a href="mailto:thestrayarmy@gmail.com" class="pl-3 pr-3"
-                  ><span
-                    class="fa fa-envelope"
-                    style="font-size: 1.2rem"
-                  ></span
-                ></a>
-
-                <a href="https://www.instagram.com/thestrayarmy/" class="pl-3 pr-3"
-                  ><span
-                    class="fa fa-instagram"
-                    style="font-size: 1.2rem"
-                  ></span
-                ></a>
-                <a href="https://twitter.com/thestrayarmy" class="pl-3 pr-3"
-                  ><span
-                    class="fa fa-twitter"
-                    style="font-size: 1.2rem"
-                  ></span
-                ></a>
-
-                <a href="https://www.youtube.com/channel/UCCCfd5YG4kOvQFsWPeI3xhA/" class="pl-3 pr-3"
-                  ><span
-                    class="fa fa-youtube-play"
-                    style="font-size: 1.2rem"
-                  ></span
-                ></a>
-              </div>
-            </div>
-          </div>
-      
-<div class="col-md-3 ml-auto">
-                <h2 class="footer-heading mb-4">
-Copyright ©</br>
-The Stray Army @2022</h2>
-                <ul class="list-unstyled">
-                  <li>
-                    <a href="terms" class="smoothscroll"
-                      >Terms and Conditions</a
-                    >
-                  </li>
-
-                  <li>
-                    <a href="privacy" class="smoothscroll"
-                      >Privacy Policy</a
-                    >
-                  </li>
-                  <li>
-                    <a href="refund" class="smoothscroll"
-                      >Refund and Cancellation Policy</a
-                    >
-                  </li>
-
-              
-                
-                </ul>
-              </div>
-
         </div>
       </div>
-    </footer>
     </div>
+  </div>
+</section>
+{% endblock %}
 
-    <script>
-      var img_url = "{{backimg.image.url}}"
-      var style = document.createElement("style");
-      var css = ".about-bg {background-image: url('"+img_url+"')}";
-      console.log(css);
-      style.innerHTML = css;
-      document.head.appendChild(style);
-    </script>
+{% block scripts %}
+<script>
+  var img_url = "{{backimg.image.url}}"
+  var style = document.createElement("style");
+  var css = ".about-bg {background-image: url('"+img_url+"')}";
+  console.log(css);
+  style.innerHTML = css;
+  document.head.appendChild(style);
+</script>
 
-    <script src="{% static 'home/js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'home/js/jquery-3.3.1.min.js' %}"></script>
 
-    <script src="{% static 'home/js/ease.js' %}"></script>
-    <script src="{% static 'home/js/script_all.js' %}"></script>
-    <script src="{% static 'home/js/util.js' %}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-
-  </body>
-</html>
+<script src="{% static 'home/js/ease.js' %}"></script>
+<script src="{% static 'home/js/script_all.js' %}"></script>
+<script src="{% static 'home/js/util.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+{% endblock %}
