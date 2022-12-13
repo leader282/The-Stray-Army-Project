@@ -24,9 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure--=4y238hi6^3fyaaftjb(y+d7of&b0axjm^j@9+@adzh#a76ar'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['thestrayarmy.com','www.thestrayarmy.com','thestrayarmy.pythonanywhere.com','www.thestrayarmy.pythonanywhere.com', '.vercel.app', '.now.sh']
+ALLOWED_HOSTS = ['thestrayarmy.com', 'www.thestrayarmy.com', 'thestrayarmy.pythonanywhere.com',
+                 'www.thestrayarmy.pythonanywhere.com', '.vercel.app', '.now.sh', '*']
 
 
 # Application definition
@@ -77,11 +78,16 @@ WSGI_APPLICATION = 'thestrayarmy.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'postgres',
+                'USER': 'postgres',
+                'PASSWORD': 'superuser',
+                'HOST': 'localhost',
+                'PORT': '5432',
     }
 }
-DATABASES['default'] = dj_database_url.config()
+
+# DATABASES['default'] = dj_database_url.config()
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
